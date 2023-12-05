@@ -1,0 +1,55 @@
+.kanban {
+    display: flex;
+    align-items: flex-start;
+  
+    &__section {
+      width: 400px;
+      background-color: #383838;
+      padding: 10px;
+      border-radius: 10px;
+  
+      & ~ & {
+        margin-left: 10px;
+      }
+  
+      &__title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 10px 0 20px;
+        color: #ffffff; // Title color
+      }
+  
+      &__content {
+        & > * ~ * {
+          margin-top: 10px;
+        }
+  
+        &__actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 10px;
+  
+          input {
+            flex: 1;
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+          }
+  
+          .kanban__icon {
+            font-size: 1.5rem;
+            color: #ffffff;
+            cursor: pointer;
+            transition: color 0.3s;
+  
+            &:hover {
+              color: #4caf50; // Hover color
+            }
+          }
+        }
+      }
+    }
+  }
+  
